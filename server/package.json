@@ -1,0 +1,25 @@
+{
+  "name": "curalink-server",
+  "version": "1.0.0",
+  "description": "Curalink — AI Medical Research Backend Pipeline",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^2.8.1",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "mongoose": "^8.9.4",
+    "morgan": "^1.10.0",
+    "xml2js": "^0.6.2",
+    "zod": "^3.23.8"
+  }
+}
