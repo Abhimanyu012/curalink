@@ -1,9 +1,9 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const MessageSchema = new mongoose.Schema({
   role: {
     type: String,
-    enum: ['user', 'assistant', 'error'],
+    enum: ["user", "assistant", "error"],
     required: true,
   },
   content: { type: String, required: true },
@@ -14,13 +14,13 @@ const ConversationSchema = new mongoose.Schema(
   {
     sessionId: { type: String, required: true, index: true },
     patientContext: {
-      patientName: { type: String, default: '' },
-      disease: { type: String, default: '' },
-      location: { type: String, default: '' },
+      patientName: { type: String, default: "" },
+      disease: { type: String, default: "" },
+      location: { type: String, default: "" },
     },
     messages: [MessageSchema],
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-export const Conversation = mongoose.model('Conversation', ConversationSchema);
+export const Conversation = mongoose.model("Conversation", ConversationSchema);
